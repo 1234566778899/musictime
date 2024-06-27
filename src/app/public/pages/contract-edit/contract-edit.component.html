@@ -15,18 +15,24 @@
                 <div>
                     <span>Cliente:</span>
                     <ul class="mt-2">
-                        <li>Nombre: {{ customer.firstName }} </li>
-                        <li>Apellidos: {{ customer.lastName }} </li>
-                        <li>Telefono: {{ customer.phone }}</li>
+                        <li>Nombre: {{ event && event.customer.firstName }}
+                        </li>
+                        <li>Apellidos: {{ event && event.customer.lastName }}
+                        </li>
+                        <li>Telefono: {{event && event.customer.phone }}</li>
                     </ul>
                 </div>
                 <div>
                     <span>Artista Musical:</span>
                     <ul class="mt-2">
-                        <li>Nombre del representante: {{musical.managerFirstName}} </li>
-                        <li>Apellidos del representante: {{ musical.managerLastName }} </li>
-                        <li>Telefono del representante: {{ musical.phone }}</li>
-                        <li>Nombre del artista: {{ musical.musicalName }}</li>
+                        <li>Nombre del representante:
+                            {{event && event.musical.managerFirstName}} </li>
+                        <li>Apellidos del representante: {{event &&
+                            event.musical.managerLastName }} </li>
+                        <li>Telefono del representante: {{ event &&
+                            event.musical.phone }}</li>
+                        <li>Nombre del artista: {{event &&
+                            event.musical.musicalName }}</li>
                     </ul>
                 </div>
             </div>
@@ -75,11 +81,14 @@
         </div>
         <br>
         <div class="text-center">
-            <button class="cont-button"  [disabled]="myForm.invalid" mat-raised-button
+            <button class="cont-button" [disabled]="myForm.invalid"
+                mat-raised-button
                 color="primary" (click)="create()">Send
                 contract</button>
         </div>
-      <button (click)="downloadPDF()" style="background-color: darkgreen; color: white; border: 2px solid white; border-radius: 10px; padding: 10px 20px; font-size: 18px;">Download Contract</button>
+        <button (click)="downloadPDF()"
+            style="background-color: darkgreen; color: white; border: 2px solid white; border-radius: 10px; padding: 10px 20px; font-size: 18px;">Download
+            Contract</button>
     </form>
     <br>
     <br>

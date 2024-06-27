@@ -13,8 +13,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { IEvent } from '../../models/Event';
 import { CommonModule } from '@angular/common';
 import { jsPDF } from 'jspdf';
-import {CustomerDetails} from "../../models/CustomerDetails";
-import {MusicalDetails} from "../../models/MusicalDetails";
+import { CustomerDetails } from "../../models/CustomerDetails";
+import { MusicalDetails } from "../../models/MusicalDetails";
 
 @Component({
   selector: 'app-contract-edit',
