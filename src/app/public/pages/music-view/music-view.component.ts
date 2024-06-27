@@ -10,12 +10,13 @@ import { Musical } from '../../models/Musical';
 import { MusicalDetails } from '../../models/MusicalDetails';
 import { MatSelectModule } from '@angular/material/select';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-music-view',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatSelectModule],
+  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, MatSelectModule, CommonModule],
   templateUrl: './music-view.component.html',
   styleUrls: ['./music-view.component.css'] // Aquí está la corrección
 })
